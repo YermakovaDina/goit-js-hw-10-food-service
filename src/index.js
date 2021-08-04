@@ -1,15 +1,17 @@
-import './sass/main.scss';
-// import menuItemTempl from './templates/menu-template.hbs';
-// import menu from './menu.json';
+import './styles.css';
+import menu from './menu.json';
+import menuTemplatesCard from './templates/card-template.hbs';
 
-// const Theme = {
-//   LIGHT: 'light-theme',
-//   DARK: 'dark-theme',
-// };
+menuRef.insertAdjacentHTML('beforeend', menuTemplatesCard(menu));
+
+const Theme = {
+  LIGHT: 'light-theme',
+  DARK: 'dark-theme',
+};
 
 // const checkbox = document.querySelector('#theme-switch-toggle');
 // const bodyEl = document.querySelector('body');
-// const menuEl = document.querySelector('.js-menu');
+// const menuRef = document.querySelector('.js-menu');
 
 // if (localStorage.theme === Theme.DARK) {
 //   checkbox.checked = true;
@@ -29,4 +31,7 @@ import './sass/main.scss';
 //   }
 // }
 
-// menuEl.insertAdjacentHTML('beforeend', menuItemTempl(menu));
+// === добавление карточек ===
+// const menuRef = document.querySelector('ul.js-menu'); // доступ к списку карточек
+// menuRef.innerHTML = menuTemplatesCard(menu); // добавляем карточки
+// console.log(menuRef);
