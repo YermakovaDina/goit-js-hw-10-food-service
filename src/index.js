@@ -12,10 +12,10 @@ const Theme = {
 };
 
 menuCards.insertAdjacentHTML('beforeend', menuCardTpl(menu));
-// console.log(menuCards);
+//console.log(menuCards);
 
 checkbox.addEventListener('change', onChangeAction);
-function onChangeAction(e) {
+function onChangeAction() {
   if (checkbox.checked === true) {
     bodyRef.classList.add(Theme.DARK);
     bodyRef.classList.remove(Theme.LIGHT);
