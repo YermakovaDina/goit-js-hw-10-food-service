@@ -14,11 +14,6 @@ const Theme = {
 menuCards.insertAdjacentHTML('beforeend', menuCardTpl(menu));
 // console.log(menuCards);
 
-if (localStorage.theme === Theme.DARK) {
-  checkbox.checked = true;
-  bodyRef.classList.add(Theme.DARK);
-}
-
 checkbox.addEventListener('change', onChangeAction);
 function onChangeAction(e) {
   if (checkbox.checked === true) {
