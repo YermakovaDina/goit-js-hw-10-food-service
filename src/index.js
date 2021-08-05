@@ -11,10 +11,13 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
+// -- добавление карточек --
 menuCards.insertAdjacentHTML('beforeend', menuCardTpl(menu));
 //console.log(menuCards);
 
+// -- изменение темы --
 checkbox.addEventListener('change', onChangeAction);
+
 function onChangeAction() {
   if (checkbox.checked === true) {
     bodyRef.classList.add(Theme.DARK);
