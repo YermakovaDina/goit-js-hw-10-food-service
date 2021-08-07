@@ -16,6 +16,11 @@ menuCards.insertAdjacentHTML('beforeend', menuCardTpl(menu));
 //console.log(menuCards);
 
 // -- изменение темы --
+if (localStorage.theme === Theme.DARK) {
+  checkbox.checked = true;
+  bodyRef.classList.add(Theme.DARK);
+}
+
 checkbox.addEventListener('change', onChangeAction);
 
 function onChangeAction() {
